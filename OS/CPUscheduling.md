@@ -52,7 +52,7 @@
 
 ## 프로세스 상태 
 
-/Users/yuhyeongeun/study/gitblog/yuhyeongeun-kor.github.com/assets/images/12-13-12-37.png
+![image](https://user-images.githubusercontent.com/12428689/146180788-d9455645-ea73-4028-81a4-779d4141cdb7.png)
 - running state : 현재 cpu에서 실행하고 있는 상태 
 - ready state : cpu에서 실행할 수 있는 대기 상태
 - block state : 특정 이벤트 발생에 대한 대기 상태  
