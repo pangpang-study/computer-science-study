@@ -40,10 +40,10 @@
 
 **추가 논제: LRU를 어떻게 구현할 것인가?**
 - 참조 링크: [Geeksforgeeks - LRU 구현 방법](https://www.geeksforgeeks.org/lru-cache-implementation/)
-- Deque + Hash: Deque에는 들어온 순서대로 저장해두고, Hash에는 해당 데이터가 메모리 혹은 캐시에 있는지 저장
-  - Hit: O(N) (Deque에서 특정 값을 삭제하는 시간이 O(N)이 걸리기 때문)
-  - Miss: O(1) (Deque에서 popleft, hash에서 remove 모두 O(1))
-- 더 좋은 방법이 있다면 공유 해주십쇼.
+- Double Linked List + Hash: Hash는 Linked List의 노드 위치를 bucket에 담아서 탐색 시간을 O(1)로 만들어 주는 역할
+  - Hit: O(1) (Hash로 탐색: O(1), LL에서 특정 값을 삭제하는 시간: O(1), 다시 LL꼬리에 추가하는 시간 O(1))
+  - Miss: O(1) (Hash로 탐색: O(1), LL에서 pop: O(1), Hash에서 remove: O(1))
+- 지적 받습니다.
 
 
 ### Clock - 유사 LRU
@@ -68,5 +68,3 @@
 
 ### Clustering/Grouping
 - 디스크에 write을 해야 할 경우 여러 페이지를 모아서 한 번에 하자. I/O Access를 줄이자
-
-## 실제 Linux에서는 어떻게 하고 있을까?
